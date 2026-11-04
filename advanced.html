@@ -1,17 +1,52 @@
 <!DOCTYPE html>
 <html lang = en>
     <head>
+        
         <title>HTML advanced stuff</title>
         <meta charset="UTF-8">
+        <style>
+        /* cascading style sheets
+        1 selecter says what ot change
+        2 declaration (proporty what to change) and (value how ot change)*/
+        body{
+            color:rgb(82, 78, 28);
+             /*changed the color of the text*/
+            background-color: rgb(211, 200, 187);
+            border: dotted, 3px, #af912f96;
+        }
+        h1{
+            text-align: center;
+        }
+        h3{
+            text-align: center;
+        }
+        #girl{
+            color:rgb(26, 15, 0);
+            text-decoration:underline;}
+        .Lists{
+            width: 350px;
+            background-color: rgb(230, 235, 169);
+            border-radius: 20px;
+            font-size: 1.2rem;
+        }
+
+
+
+
+        
+        </style>
     </head>
-    <body>
+    <body> 
         <h1>HTML Advanced Notes</h1>
+
+        <div class = "Lists">
         <h3> Lists: </h3>
+
         <ol type ="I">
-            <div><li>Hallie</li></div>
+            <div><li id = "girl">even"Hallie</li></div>
             <li>Mathis</li>
             <li>Xander</li>
-            <li>Hannah</li>
+            <li id = "girl">Hannah</li>
         </ol>
 
         <ul>
@@ -27,7 +62,7 @@
                 <dd>thanksgiving</dd>
             <dt> Winter</dt>
                 <dd>christmas</dd>
-        </dl>
+        </dl></div>
 
         <h3>Attributes: </h3>
         <div>
@@ -35,11 +70,11 @@
         <p> Image from: WordPress,     
             Creator: dtsears</p></div>
 
-         <div><img src = "Winter Timp.jpg" alt = "Mt. Timp" width = "250px">
+         <div><img src = "Winter Timp.jpg" alt = "Mt. Timp" width = "350px">
         <p>Image from: <a href = "https://www.flickr.com/" target = "_blank"> Flickr</a> 
             Creator: Michael Jolley </p></div>
         
-<a href = "" target = "_blank"> <img scr = "" alt = "Ice Rink" width = "300px"></a>
+
 
     </body>
 </html>
