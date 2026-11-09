@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang = en>
+    <head>
+        
+        <title>HTML advanced stuff</title>
+        <meta charset="UTF-8">
+        <style>
+            #box{
+                height: 75px;
+                width: 75px;
+                background-color: cadetblue;
+                color:rgb(1, 6, 14);
+                text-align: center;
+                /*margin:0 auto;*/
+
+            }
+            #grid-wrapper{
+                display:grid;
+                grid-template-columns: 1fr 1fr 100px;
+                gap: 5px;
+            }
+            button{
+                margin-top:25px;
+                padding:25px;
+            }
+            #flex-wrapper{
+                display: flex;
+                flex-direction: row;
+                /*justify-content: ; /* deas with y for row and x for colum*/ /**/
+                align-items: center;/*deals with x axis*/
+                flex-wrap: wrap;/*wraps stuff to keep it on the page.*/
+/*STUFF HAS TO BE MOVED IN GROUPS. > THIS IS WHY DIV IS IMPORTANT*/
+            }
+        </style>
+    </head>
+    <body> 
+       <h1>Alignment Notes</h1>
+       <div id = grid-wrapper>
+        <div id = box>
+            <p>Box 1</p>
+        </div>
+        <div id = box>
+            <p>Box 2</p>
+        </div>
+        <div id = box>
+            <p>Box 3</p>
+        </div>
+        <div id = box>
+            <p>Box 4</p>
+        </div>
+    </div>
+    <div id = flex-wrapper>
+        <div id = box>
+            <p>Box 5</p>
+        </div>
+        <div id = box>
+            <p>Box 6</p>
+        </div>
+        <div id = box>
+            <p>Box 7</p>
+        </div>
+        <div id = box>
+            <p>Box 8</p>
+        </div>
+    </div>
+    <button>Click me</button>
+    </body>
+</html>
