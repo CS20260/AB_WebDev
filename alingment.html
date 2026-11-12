@@ -24,20 +24,24 @@
                 padding:25px;
             }
             #flex-wrapper{
-                display: flex;
+                display: none;
                 flex-direction: row;
-                /*justify-content: ; /* deas with y for row and x for colum*/ /**/
+                /*justify-content: ; /* deals with y for row and x for column*/ /**/
                 align-items: center;/*deals with x axis*/
                 flex-wrap: wrap;/*wraps stuff to keep it on the page.*/
 /*STUFF HAS TO BE MOVED IN GROUPS. > THIS IS WHY DIV IS IMPORTANT*/
             }
+            img{
+                width: 200px
+            }
         </style>
+        
     </head>
     <body> 
        <h1>Alignment Notes</h1>
        <div id = grid-wrapper>
         <div id = box>
-            <p>Box 1</p>
+            <p id = text>Show more</p>
         </div>
         <div id = box>
             <p>Box 2</p>
@@ -50,7 +54,7 @@
         </div>
     </div>
     <div id = flex-wrapper>
-        <div id = box>
+        <div id = "box" onmouseover="showHi">
             <p>Box 5</p>
         </div>
         <div id = box>
@@ -63,6 +67,52 @@
             <p>Box 8</p>
         </div>
     </div>
-    <button>Click me</button>
+    <div id = image><img src = "Ice rink birds eye view.png" alt = "Ice Rink - Birds Eye View" ></div>
+    
+    
+
+
+
+
+
+
+
+
+
+
+    <div id = newColor>
+    <input type = "color" id = "newColor">
+    <br>
+    <button onclick="changeColor()">Click me</button></div>
+    <script>
+            let img = ["1.png","2.jpg","9.jpg","Ice rink birds eye view.png"]
+            let currentImg = 0
+            function rotate(){
+                currentImg += 1
+                if( currentImg>3)
+            {currentImg = 0}
+                document.getElementById("Ice rink birds eye view.png").scr
+            }
+            function changeColor(){
+                let currentColor = document.getElementById9("newColor").value
+                document.getElementById("box").style.backgroundColor="orange"
+
+            function showHide(){
+                let item = document.getElementById("flex-wrapper").style.display
+                if(item.style.display == "flex"){
+                    item.style.display ="none"
+                    document.getElementById("text").innerHTML = "show More"
+                }else{
+                    item.style.display = "flex"
+                    document.getElementById("text").innerHTML = "show less"
+                }
+            }}
+            
+
+
+
+
+
+        </script>
     </body>
 </html>
