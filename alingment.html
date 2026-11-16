@@ -83,14 +83,14 @@
     <div id = newColor>
     <input type = "color" id = "newColor">
     <br>
-    <button onclick="changeColor()">Click me</button></div>
+    <button onclick="rotate()">Click me</button></div>
     <script>
             let img = ["1.png","2.jpg","9.jpg","Ice rink birds eye view.png"]
             let currentImg = 0
             function rotate(){
                 currentImg += 1
                 if( currentImg>3)
-            {currentImg = 0}
+                {currentImg = 0}
                 document.getElementById("Ice rink birds eye view.png").scr
             }
             function changeColor(){

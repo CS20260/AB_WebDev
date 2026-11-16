@@ -30,7 +30,7 @@
             img{
                 width: 300px;
                 margin: 0% auto;
-                display:grid;
+                display:flex;
                 grid-template-columns: 25% 25% 25%;
                 
                 
@@ -44,12 +44,18 @@
                 text-align: center;
                 
             }
+            #img-stuff{
+                display:flex;
+                justify-content: center;
+                padding: 20px;
+
+            }
 
         </style>
     </head>
     <body>
         <h1>- A Guide To Ice Hockey -</h1>
-        <div id = Image><img src = "Ice rink birds eye view.png" alt = "Ice Rink - Birds Eye View" ></div>
+        <div id = "Image1"><img src = "Ice rink birds eye view.png" alt = "Ice Rink - Birds Eye View" ></div>
         <h5>Image from: <a href = "https://openclipart.org/detail/231781/nhl-rink" target = "_blank"> openclipart</a> 
             <p>Creator: bobj_rbjassoc_com </p></h5>
         
@@ -67,7 +73,7 @@
                 <dd>~ Left Wing (Normally lines up on the left side of a circle at a face-off.)</dd>
                 <dd>~ Center (Normally lines up in the circle at a faceoff.)</dd></dt>
                 </dl>
-           <div id = Image > <img src = "Face off centers.jpg" alt = "Face off centers" ></div>
+           <div id = "Image2"> <img src = "Face off centers.jpg" alt = "Face off centers" ></div>
         <h5>Image from:<a href = "https://www.rawpixel.com/image/6113520/photo-image-public-domain-people-free" target = "_blank"> rawpixel</a> 
             Author: Unknown </p></h5>
         <dl>
@@ -76,8 +82,30 @@
                 <dd>~ Left Defence (Normally lines up behind and to the left of the circle at a face-off.)</dd>
                 <dd>~ Goalie (Goalies are the last line of defence, but are a unique position. Normally stays by the net.)</dd>
         </dl>
-        <div id = Image><img src = "Semyon Varlamov.jpg" alt = "Semyon Varlamov - A Save" ></div>
+        <div id = "Image3"><img src = "Semyon Varlamov.jpg" alt = "Semyon Varlamov - A Save" ></div>
         <h5>Image from: <a href = "https://commons.wikimedia.org/wiki/File:Semyon_Varlamov.jpg" target = "_blank"> Wikimedia Commons</a> 
             Author: All-Pro Reels </p></div></h5>
+
+            <div id = "Image4"><img src = "Pittsburgh_Penguins,_vs_Washington_Capitals.jpg" alt = "Penguins vs Capitals" ></div>
+        <h5>Image from: <a href = "https://commons.wikimedia.org/wiki/File:Pittsburgh_Penguins,_Washington_Capitals,_Bryan_Rust_%2833744033514%29.jpg" target = "_blank"> Wikimedia Commons</a> 
+            Author: Keith Allison </p></div></h5>
+
+            <div id ="img-stuff">
+                <div id = "Image1"><img src = "Ice rink birds eye view.png" alt = "Ice Rink - Birds Eye View" ></div>
+                <div id = "Image2"> <img src = "Face off centers.jpg" alt = "Face off centers" ></div>
+                <div id = "Image3"><img src = "Semyon Varlamov.jpg" alt = "Semyon Varlamov - A Save" ></div>
+            </div>
+            
+    <script>
+            let img = ["Pittsburgh_Penguins,_vs_Washington_Capitals.jpg","Bergstrom.jpg","Ovechkin.jpg"]
+            let currentImg = 0
+            function rotate(){
+                currentImg += 1
+                if( currentImg>3)
+                {currentImg = 0}
+            document.getElementById("img").src = img[currentImg]
+            }
+    </script>
+    <button onclick="rotate()">Click me</button>
     </body>
 </html>
