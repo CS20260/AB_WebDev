@@ -5,6 +5,7 @@
         <title> - A Guide To Ice Hockey - </title>
         <style>
             body{
+                color:rgb(5, 64, 122);
                 background-color:rgb(231, 244, 252);
                 font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
                 padding: 15px;
@@ -15,22 +16,23 @@
                 
                 text-align: center;
                 }
-    
+           
+                
             h3{
                 text-align: center;
-              
             }
            
-            
             
             img{
                 width: 300px;
                 margin: 0% auto;
                 display:flex;
                 grid-template-columns: 25% 25% 25%;
-            
+                
+                
+                
+
             }
-           
             
             #Positioning{
                 text-align: center;
@@ -85,20 +87,33 @@
         <h5>Image from: <a href = "https://commons.wikimedia.org/wiki/File:Semyon_Varlamov.jpg" target = "_blank"> Wikimedia Commons</a> 
             Author: All-Pro Reels </p></div></h5>
 
-            <div id = "Image4"><img src = "Pittsburgh_Penguins,_vs_Washington_Capitals.jpg" alt = "Penguins vs Capitals" ></div>
-        <h5>Image from: <a href = "https://commons.wikimedia.org/wiki/File:Pittsburgh_Penguins,_Washington_Capitals,_Bryan_Rust_%2833744033514%29.jpg" target = "_blank"> Wikimedia Commons</a> 
-            Author: Keith Allison </p></div></h5>
-
             
-            <img id="help" scr="Ovechkin.jpg" alt="Ovechkin" onmouseover="rotate()">
+
+        <button id="text" onclick="showHide()">(click to remove bias opinion)</button>
+        <div id= "hidden_text"><p> Hockey is the best sport. </p><img src = "Pittsburgh_Penguins,_vs_Washington_Capitals.jpg" alt = "Penguins vs Capitals" ><h5>Image from: <a href = "https://commons.wikimedia.org/wiki/File:Pittsburgh_Penguins,_Washington_Capitals,_Bryan_Rust_%2833744033514%29.jpg" target = "_blank"> Wikimedia Commons</a> 
+            Author: Keith Allison </p></div>
+            
+        <img id="rotating" onmouseout="rotate()" src = "Bergstrom.jpg" alt = "Bergstrom" ><h5>Image from: <a href = "https://commons.wikimedia.org/wiki/File:20170406_AUTSWE_2636.jpg" target = "_blank"> Wikimedia Commons</a> 
+            Author: Ailura </p>
+        
     <script>
-            let images = [,"Bergstrom.jpg",""]
+            let images = ["Bergstrom.jpg","Ovechkin.jpg"]
             let currentImg = 0
             function rotate(){
                 currentImg += 1
-                if( currentImg>3)
+                if( currentImg>1)
                 {currentImg = 0}
-            document.getElementById("help").src = images[currentImg]
+            document.getElementById("rotating").src = images[currentImg]
+            }
+            function showHide(){
+                let item = document.getElementById("hidden_text")
+                if(item.style.display == "flex"){
+                    item.style.display ="none"
+                    document.getElementById("text").innerHTML = "show More"
+                }else{
+                    item.style.display = "flex"
+                    document.getElementById("text").innerHTML = "show less"
+                }
             }
             function showHide(){
                 let item = document.getElementById("hidden_text")
@@ -113,7 +128,6 @@
             }
 
     </script>
-    <button id="text" onclick="showHide()">Bias Information (click here)</button>
-        <p id= "hidden_text" style="display: none;"> Hockey is the best sport.</p>
+    
     </body>
 </html>
