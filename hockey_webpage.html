@@ -9,22 +9,18 @@
                 font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
                 padding: 15px;
                 margin: 5px;
+                color:rgb(5, 64, 122);
             }
             h1{
-                color:rgb(5, 64, 122);
+                
                 text-align: center;
                 }
-            h5{
-                color:rgb(5, 64, 122);
-            }
+    
             h3{
                 text-align: center;
-                color:rgb(5, 64, 122);
+              
             }
-            p{
-                color:rgb(5, 64, 122);
-                
-            }
+           
             
             
             img{
@@ -32,15 +28,10 @@
                 margin: 0% auto;
                 display:flex;
                 grid-template-columns: 25% 25% 25%;
-                onmouseover="rotate()"
-                
-                
-
+            
             }
-            dl{
-                color: rgb(5, 64, 122);
-                
-            }
+           
+            
             #Positioning{
                 text-align: center;
                 
@@ -50,6 +41,13 @@
                 justify-content: center;
                 padding: 20px;
 
+            }
+            button{
+                margin-top: 10px;
+                padding:5px ;
+                background-color:aqua ;
+                color:black;
+                border-color:grey;
             }
 
         </style>
@@ -91,23 +89,31 @@
         <h5>Image from: <a href = "https://commons.wikimedia.org/wiki/File:Pittsburgh_Penguins,_Washington_Capitals,_Bryan_Rust_%2833744033514%29.jpg" target = "_blank"> Wikimedia Commons</a> 
             Author: Keith Allison </p></div></h5>
 
-            <div id ="img-stuff">
-                <div id = "Image1"><img src = "Ice rink birds eye view.png" alt = "Ice Rink - Birds Eye View" ></div>
-                <div id = "Image2"> <img src = "Face off centers.jpg" alt = "Face off centers" ></div>
-                <div id = "Image3"><img src = "Semyon Varlamov.jpg" alt = "Semyon Varlamov - A Save" ></div>
-            </div>
             
+            <img id="help" scr="Ovechkin.jpg" alt="Ovechkin" onmouseover="rotate()">
     <script>
-            let img = ["Pittsburgh_Penguins,_vs_Washington_Capitals.jpg","Bergstrom.jpg","Ovechkin.jpg"]
+            let images = [,"Bergstrom.jpg",""]
             let currentImg = 0
             function rotate(){
                 currentImg += 1
                 if( currentImg>3)
                 {currentImg = 0}
-            document.getElementById("img").src = img[currentImg]
+            document.getElementById("help").src = images[currentImg]
             }
+            function showHide(){
+                let item = document.getElementById("hidden_text")
+                if(item.style.display == "flex"){
+                    item.style.display = "none"
+                    document.getElementById("text").innerHTML = "Show More"
+                }else{
+                    item.style.display= "flex"
+                }{item.style.display ="flex"
+                    document.getElementById("text")
+                }
+            }
+
     </script>
-    <button onclick="revealText()">Bias Information (click here)</button>
+    <button id="text" onclick="showHide()">Bias Information (click here)</button>
         <p id= "hidden_text" style="display: none;"> Hockey is the best sport.</p>
     </body>
 </html>
