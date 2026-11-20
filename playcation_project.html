@@ -27,38 +27,55 @@
 
             }
             ul{
-                text-align: center;
+                text-align:left;
             }
-           
-            
-
+            #flex-stuff{
+                display: grid;
+                grid-column: 25%;
+                grid-row: 25%;
+                
+            }
+            #color-change{
+                background-color: rgb(241, 234, 133);
+            }
+            #color-change2{
+                background-color: rgb(241, 234, 133);
+                width:fit-content;
+                height: fit-content;
+                padding: 20px;
+                margin: 20px;
+            }
 
 
         </style>
     </head>
-    <body> 
-       <h1> Bonneville Salt Flats</h1>
-       <p>The Bonneville Slat Flats are an expance of land (about 46 square feet) packed with salt. The salt flats were created by the evaporation of Lake Bonneville. When it rains the water on the salt flats create a mirror-like reflexion. The salt flats are located in Tooele County. </p>
+    <div id="flex-stuff"><body> 
+       
+            <div id="color-change"><h1> Bonneville Salt Flats</h1></div>
+            <p>The Bonneville Slat Flats are an expance of land (about 46 square feet) densely packed with salt. The salt flats were created by the evaporation of Lake Bonneville. When it rains the water on the salt flats create a mirror-like reflexion. The salt flats are located in Tooele County. </p>
+        
 
         <div id="flex-wrapper">
             <div id="box1">
                 <img src = "Sunset_at_Salt_Flats.jpg" alt = "Sunset Image" >
-                <h6>Image from: <a href = "https://commons.wikimedia.org/wiki/File:Sunset_at_Salt_Flats.jpg" target = "_blank"> Wikimedia</a> Creator: Asibasm </h6>
+                <h6>     Image from: <a href = "https://commons.wikimedia.org/wiki/File:Sunset_at_Salt_Flats.jpg" target = "_blank"> Wikimedia</a> Creator: Asibasm </h6>
             </div>
+
             <div id="box2">
                 <img src = "Bonneville_Salt_Flats_(flooded)_(33020225380).jpg" alt = "Flooded flats" >
-                <h6>Image from: <a href = "https://commons.wikimedia.org/wiki/File:Bonneville_Salt_Flats_(flooded)_(33020225380).jpg" target = "_blank"> Wikimedia Commons</a> Author: m01229 from USA </h6>
+                <h6>     Image from: <a href = "https://commons.wikimedia.org/wiki/File:Bonneville_Salt_Flats_(flooded)_(33020225380).jpg" target = "_blank"> Wikimedia Commons</a> Author: m01229 from USA </h6>
                 </div>
         </div>
 
 
-        <h3> - Reasons to Go - </h3>
-        <ul>
+        <div id="color-change2"><h3> - Reasons to Go - </h3>
+            <ul>
             
-            <li> - Easily accessible </li>
-            <li> - You can drive on the flats </li>
-            <li> - Gorgeous views, and excellent stargazing surroundings </li>
-        </ul>
+                <li> - Easily accessible </li>
+                <li> - You can drive on the flats </li>
+                <li> - Gorgeous views, and excellent stargazing surroundings </li>
+            </ul>
+        </div>
        
 
        
@@ -69,17 +86,17 @@
         <button id="text" onclick="showHide()">Show More</button>
 
         <div id="hidden_text">
-            <h6>Interstate image from: <a href = "https://commons.wikimedia.org/wiki/ File:2014-07-05_18_39_41_View_east_along_Interstate_80_from_the_Exit_4_overpass_in_the_Bonneville_Salt_Flats,_Utah.JPG" target = "_blank">
+            <h6>     Interstate image from: <a href = "https://commons.wikimedia.org/wiki/ File:2014-07-05_18_39_41_View_east_along_Interstate_80_from_the_Exit_4_overpass_in_the_Bonneville_Salt_Flats,_Utah.JPG" target = "_blank">
             Wikimedia</a> Creator: Famartin </h6>
 
-            <h6>Daytime image from: <a href = "https://commons.wikimedia.org/wiki/File:Bonneville_Salt_Flats,_Utah_(20011286671).jpg" target = "_blank"> Wikimedia Commons</a> Author: zoxcleb </p></h6>
+            <h6>     Daytime image from: <a href = "https://commons.wikimedia.org/wiki/File:Bonneville_Salt_Flats,_Utah_(20011286671).jpg" target = "_blank"> Wikimedia Commons</a> Author: zoxcleb </p></h6>
 
-            <h6>Night sky image from: <a href = "https://commons.wikimedia.org/wiki/File:The_Milky_Way_Galaxy_from_the_Bonneville_Salt_Flats,_Utah,_United_States.jpg" target = "_blank"> Wikimedia Commons</a> Author: Abu Sufian Mohammad Asib </p></h6>
+            <h6>     Night sky image from: <a href = "https://commons.wikimedia.org/wiki/File:The_Milky_Way_Galaxy_from_the_Bonneville_Salt_Flats,_Utah,_United_States.jpg" target = "_blank"> Wikimedia Commons</a> Author: Abu Sufian Mohammad Asib </p></h6>
 
         </div>
         
 
-    </body>
+    </body></div>
     <script>
         let images = ["The_Milky_Way_Galaxy_from_the_Bonneville_Salt_Flats,_Utah,_United_States.jpg","2014-07-05_18_39_41_View_east_along_Interstate_80_from_the_Exit_4_overpass_in_the_Bonneville_Salt_Flats,_Utah.JPG","Bonneville_Salt_Flats,_Utah_(20011286671).jpg"]
         let currentImg = 0
@@ -93,7 +110,7 @@
             let item = document.getElementById("hidden_text")
             if(item.style.display == "flex"){
                 item.style.display ="none"
-                document.getElementById("text").innerHTML = "Show More"
+                document.getElementById("text").innerHTML = "Show Rotating Image Citations"
             }else{
                 item.style.display = "flex"
                 document.getElementById("text").innerHTML = "Hide Rotating Image Citations"
