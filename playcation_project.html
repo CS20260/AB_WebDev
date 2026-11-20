@@ -45,7 +45,9 @@
                 padding: 20px;
                 margin: 20px;
             }
-
+            #closure{
+                text-align: center;
+            }
 
         </style>
     </head>
@@ -71,9 +73,9 @@
         <div id="color-change2"><h3> - Reasons to Go - </h3>
             <ul>
             
-                <li> - Easily accessible </li>
-                <li> - You can drive on the flats </li>
-                <li> - Gorgeous views, and excellent stargazing surroundings </li>
+                <li>  Easily accessible </li>
+                <li>  You can drive on the flats </li>
+                <li>  Gorgeous views, and excellent stargazing surroundings </li>
             </ul>
         </div>
        
@@ -83,16 +85,22 @@
         <img id="rotating" onmouseover="rotate()" src = "The_Milky_Way_Galaxy_from_the_Bonneville_Salt_Flats,_Utah,_United_States.jpg" alt = "stars at flats" >
             
 
-        <button id="text" onclick="showHide()">Show More</button>
+        <button id="text" onclick="showHide()">Hide</button>
 
         <div id="hidden_text">
             <h6>     Interstate image from: <a href = "https://commons.wikimedia.org/wiki/ File:2014-07-05_18_39_41_View_east_along_Interstate_80_from_the_Exit_4_overpass_in_the_Bonneville_Salt_Flats,_Utah.JPG" target = "_blank">
             Wikimedia</a> Creator: Famartin </h6>
 
-            <h6>     Daytime image from: <a href = "https://commons.wikimedia.org/wiki/File:Bonneville_Salt_Flats,_Utah_(20011286671).jpg" target = "_blank"> Wikimedia Commons</a> Author: zoxcleb </p></h6>
+            <h6>     Daytime image from: <a href = "https://commons.wikimedia.org/wiki/File:Bonneville_Salt_Flats,_Utah_(20011286671).jpg" target = "_blank"> Wikimedia Commons</a> Author: zoxcleb </h6>
 
-            <h6>     Night sky image from: <a href = "https://commons.wikimedia.org/wiki/File:The_Milky_Way_Galaxy_from_the_Bonneville_Salt_Flats,_Utah,_United_States.jpg" target = "_blank"> Wikimedia Commons</a> Author: Abu Sufian Mohammad Asib </p></h6>
+            <h6>     Night sky image from: <a href = "https://commons.wikimedia.org/wiki/File:The_Milky_Way_Galaxy_from_the_Bonneville_Salt_Flats,_Utah,_United_States.jpg" target = "_blank"> Wikimedia Commons</a> Author: Abu Sufian Mohammad Asib </h6>
+            
+            <h6>     Image from: <a href = "https://commons.wikimedia.org/wiki/File:Salt_Flats_Hexagons_and_Leading_Lines.jpg" target = "_blank"> Wikimedia</a> Creator: Abu Sufian Mohammad Asib</h6>
+            
+            <div id="flex-wrapper"><img src = "Salt_Flats_Hexagons_and_Leading_Lines.jpg" alt = "salt hexagons" ></div>
+                
 
+            <h4 id="closure">Lake Bonneville is a beautiful place, and an amazing experiance. People come from all around the world to race and drive on the slat flats. Utah is a great place to find amazing new adventures.</h4>
         </div>
         
 
@@ -110,10 +118,10 @@
             let item = document.getElementById("hidden_text")
             if(item.style.display == "flex"){
                 item.style.display ="none"
-                document.getElementById("text").innerHTML = "Show Rotating Image Citations"
+                document.getElementById("text").innerHTML = "Show "
             }else{
                 item.style.display = "flex"
-                document.getElementById("text").innerHTML = "Hide Rotating Image Citations"
+                document.getElementById("text").innerHTML = "Hide "
             }
         }
 
