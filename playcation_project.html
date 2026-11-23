@@ -88,7 +88,7 @@
         <img id="rotating" onmouseover="rotate()" src = "The_Milky_Way_Galaxy_from_the_Bonneville_Salt_Flats,_Utah,_United_States.jpg" alt = "stars at flats" >
             
 
-        <button id="text" onclick="showHide()">Hide</button>
+        <button id="text" onclick="showHide()">Show</button>
 
         <div id="hidden_text">
             <h6>     Interstate image from: <a href = "https://commons.wikimedia.org/wiki/ File:2014-07-05_18_39_41_View_east_along_Interstate_80_from_the_Exit_4_overpass_in_the_Bonneville_Salt_Flats,_Utah.JPG" target = "_blank">
@@ -120,10 +120,10 @@
         function showHide(){
             let item = document.getElementById("hidden_text")
             if(item.style.display == "flex"){
-                item.style.display = "flex"
+                item.style.display ="none"
                 document.getElementById("text").innerHTML = "Show"
             }else{
-                item.style.display ="none"
+                item.style.display = "flex"
                 document.getElementById("text").innerHTML = "Hide"
             }
         }
