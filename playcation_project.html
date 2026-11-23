@@ -18,6 +18,9 @@
             p{
                 text-align: center;
             }
+            #hidden_text{
+                display: none;
+            }
             #flex-wrapper{
                 display:flex;
                 justify-content: space-around;
@@ -117,11 +120,11 @@
         function showHide(){
             let item = document.getElementById("hidden_text")
             if(item.style.display == "flex"){
-                item.style.display ="none"
-                document.getElementById("text").innerHTML = "Show "
-            }else{
                 item.style.display = "flex"
-                document.getElementById("text").innerHTML = "Hide "
+                document.getElementById("text").innerHTML = "Show"
+            }else{
+                item.style.display ="none"
+                document.getElementById("text").innerHTML = "Hide"
             }
         }
 
